@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS-Functions and Events</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: darkcyan;
+		}
+
+		.container{
+			border: 1px solid black;
+			width: 570px;
+			margin: 10px;
+			padding: 15px;
+			border-radius: 8px;
+			top: 50%;
+			left: 50%;
+			margin-left: 450px;
+margin-top: 10px;
+		box-shadow: 21px 10px 5px 1px rgba(0,0,0,0.89);
+-webkit-box-shadow: 21px 10px 5px 1px rgba(0,0,0,0.89);
+-moz-box-shadow: 21px 10px 5px 1px rgba(0,0,0,0.89);
+			text-align: center;
+		}	
+		img{
+			width: 250px;
+			height: 250px;
+		}
+		div{
+			text-align: center;
+		}
+	</style>
+	<div>
+	<img src="https://static.thenounproject.com/png/1926277-200.png">
+	<h3>Greetings, I answer to the name of John.</h3>
+<h3>I, a random, present myself to you to bequeath to you a great challenge.</h3>
+</div>
+	<div class="container" id="cent">
+		Enter 1st Number: <input type="number" id="box1"> <br></br>
+		Enter 2nd Number: <input type="number" id="box2"> <br></br>
+		<h3 id="sum"></h3>
+		<h3 id="difference"></h3>
+		<h3 id="product"></h3>
+		<h3 id="quotient"></h3>
+		<button type="submit" onclick="addition()" class="btn btn-primary btn-lg">ADD</button>
+		<button type="submit" onclick="subtraction()" class="btn btn-success btn-lg">SUBTRACT</button>
+		<button type="submit" onclick="multiplication()" class="btn btn-danger btn-lg">MULTIPLY</button>
+		<button type="submit" onclick="division()" class="btn btn-warning btn-lg">DIVIDE</button>
+	</div>
+	<script type="text/javascript">
+		function addition() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var sum = Number(num1) + Number(num2);
+			document.getElementById("sum").innerHTML = "The sum is: " + sum;
+		}
+
+		function subtraction() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var difference = Number(num1) - Number(num2);
+			document.getElementById("difference").innerHTML = "The difference is: " + difference;
+		}
+
+		function multiplication() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var product = Number(num1) * Number(num2);
+			document.getElementById("product").innerHTML = "The product is: " + product;
+		}
+
+		function division() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var quotient = Number(num1) / Number(num2);
+			document.getElementById("quotient").innerHTML = "The quotient is: " + quotient;
+		}
+	</script>
+</body>
+</html>
